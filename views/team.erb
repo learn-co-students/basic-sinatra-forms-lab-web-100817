@@ -3,12 +3,22 @@
  <head>
   <meta charset="UTF-8">
   <title>Basketball Team</title>
+  <style>
+    body {
+      margin: auto;
+      display: block;
+      width: 30%;
+    }
+
+    input{
+      width: 350px;
+    }
+  </style>
  </head>
  <body>
- 
-
-
+   <%@params.each do |keys,values|%>
+      <% hash={"name"=>"Team Name","coach"=>"Coach","pg"=>"Point Guard","sg"=>"Shooting Guard","sf"=> "Small Forward","pf"=> "Power Forward","c"=>"Center"}%>
+      <h2><%="#{hash[keys]}: #{values}"%></h2>
+  <% end %>
  </body>
 </html>
-
-
